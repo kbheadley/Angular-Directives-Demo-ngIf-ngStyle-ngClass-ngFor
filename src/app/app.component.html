@@ -14,15 +14,16 @@
             <!-- Steps 1-3:  add click listener that changes value of showParagraph -->
             <!-- <button class="btn btn-primary" (click)="showParagraph = !showParagraph">Display Details</button> -->
 
-            <button class="btn btn-primary" (click)="onToggleParagraph()">Display Details</button>
+            <button class="btn btn-primary" (click)="onToggleParagraph()">Display Random Text Paragraph</button>
              <!-- test value of showParagraph with ngIf - look at DOM changes -->
             <p *ngIf="showParagraph">This is not the hill i want to die on looks great, can we try it a different way, but circle back, bake it in we don't want to boil the ocean. This is meaningless. Optics. Productize. Can we parallel path in an ideal world. Bake it in staff engagement. Single wringable neck face time. I have zero cycles for this hire the best but pushback come up with something buzzworthy, yet goalposts or social currency so the right info at the right time to the right people. This is a no-brainer thinking outside the box. We don't need to boil the ocean here rock Star/Ninja golden goose. Quick-win Q1, and pipeline, or touch base message the initiative message the initiative. Looks great, can we try it a different way hit the ground running for bench mark, and critical mass, for how much bandwidth do you have dunder mifflin shotgun approach.</p>
             <!-- <app-assignment></app-assignment> -->
             
-            <div *ngFor = "let logItem of log"
-            [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
-            [ngClass] = "{'white-text': logItem >= 5}"
-            >{{logItem}}</div>
+            <div *ngFor = "let logItem of log; let i = index"
+            
+            [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+            [ngClass] = "{'white-text': i >= 4}"
+            >Button clicked {{i + 1}} time(s) at:    {{logItem}}</div>
         </div>
     </div>
 </div>

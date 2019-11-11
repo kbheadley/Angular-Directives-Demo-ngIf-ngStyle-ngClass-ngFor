@@ -11,7 +11,10 @@ export class AppComponent {
 
   onToggleParagraph() {
     this.showParagraph = !this.showParagraph;  // toggle display of paragraph
-    this.log.push(this.log.length + 1);  // count the iteration
+
+    // we can do better than incrementing numbers!
+    // this.log.push(this.log.length + 1);  // count the iteration
+    this.log.push(new Date());
   }
   
 }
